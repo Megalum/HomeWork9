@@ -77,17 +77,18 @@ namespace HomeWork9
 
             bool Flag(int numberFirst, int numberSecond)
             {
+                int maxResult = 16058; //если рекурсия превышает это значение выдает ошибку
                 if (numberFirst > 4)
                     return false;
                 else if (numberFirst == 4 && numberSecond >= 1)
                     return false;
                 else if (numberFirst == 3 && numberSecond > 10)
                     return false;
-                else if (numberFirst == 2 && 2 * numberSecond + 3 >= 16058) //если рекурсия превышает это значение выдает ошибку
+                else if (numberFirst == 2 && 2 * numberSecond + 3 >= maxResult) 
                     return false;
-                else if (numberFirst == 1 && numberSecond + 2 >= 16058)
+                else if (numberFirst == 1 && numberSecond + 2 >= maxResult)
                     return false;
-                else if (numberFirst == 0 && numberSecond + 1 >= 16058)
+                else if (numberFirst == 0 && numberSecond + 1 >= maxResult)
                     return false;
 
                 return true;
